@@ -20,7 +20,7 @@ PCD$Date <- as.Date(PCD$Date, format="%d/%m/%Y")
 #  3. Sub metering 
 #  4. Global Reactive Power
 png("plot4.png", width=480, height=480)
-layout(matrix(c(1,2,3,4), 2, 2, byrow = TRUE)) # Lays out the grid for combination plots
+layout(matrix(c(1,2,3,4), 2, 2, byrow = TRUE)) # Lays out the grid for combination plots. alternatively par() can be used
 plot(PCDSubset$DateTime, PCDSubset$Global_active_power, type="l",xlab="", ylab="Global Active Power")
 plot(PCDSubset$DateTime, PCDSubset$Voltage, type="l", xlab="datetime", ylab="Voltage")
 plot(PCDSubset$DateTime, PCDSubset$Sub_metering_1, type="l", ylab="Energy sub metering", xlab="")
